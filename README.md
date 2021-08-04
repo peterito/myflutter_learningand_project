@@ -1,3 +1,11 @@
+## This is how i manage and handle my navigation in fluter and the link to the article on
+
+## Hashnode
+
+## the link to my article.
+
+https://peteroyebamiji.hashnode.dev/how-to-handle-navigation-in-flutter
+
 # flutter_learning
 
 A new Flutter project.
