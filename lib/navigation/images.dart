@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/navigation/firstScreen.dart';
 
 class ImageScreen extends StatelessWidget {
   const ImageScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var size;
     return Scaffold(
       backgroundColor: const Color(0xFF3a49eb),
       body: Padding(
@@ -29,12 +31,20 @@ class ImageScreen extends StatelessWidget {
               style: TextStyle(fontSize: 17, color: Colors.white60),
             ),
             const SizedBox(
-              height: 40,
+              height: 5,
             ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text(
+                  'This is the second screen, click to go back',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                )),
             Container(
                 padding: const EdgeInsets.only(
                     top: 5, bottom: 5, right: 10, left: 25),
-                height: 60,
+                height: 50,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                     color: Colors.white,

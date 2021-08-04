@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/navigation/images.dart';
 
-class ButtonScreen extends StatelessWidget {
-  const ButtonScreen({Key? key}) : super(key: key);
+class FirstScreen extends StatelessWidget {
+  const FirstScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -62,9 +63,16 @@ class ButtonScreen extends StatelessWidget {
                     elevation: 5,
                     minimumSize: Size(size.width, 50),
                     primary: Color(0xFF000000)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const ImageScreen(),
+                    ),
+                  );
+                },
                 child: const Text(
-                  'Get Started',
+                  'Get Started to move to another page',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 )),
             const SizedBox(
